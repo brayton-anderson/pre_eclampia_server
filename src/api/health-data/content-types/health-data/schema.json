@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "health_datas",
+  "info": {
+    "singularName": "health-data",
+    "pluralName": "health-datas",
+    "displayName": "HealthData",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userId": {
+      "type": "biginteger",
+      "required": true,
+      "default": "0"
+    },
+    "water": {
+      "type": "biginteger"
+    },
+    "distance": {
+      "type": "biginteger"
+    },
+    "steps": {
+      "type": "biginteger"
+    },
+    "babykicks": {
+      "type": "biginteger"
+    },
+    "fatalheartrate": {
+      "type": "biginteger"
+    },
+    "saturation": {
+      "type": "biginteger"
+    },
+    "temprature": {
+      "type": "biginteger"
+    },
+    "heartrate": {
+      "type": "biginteger"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "health_data"
+    },
+    "eid": {
+      "type": "uid"
+    },
+    "createdat": {
+      "type": "datetime"
+    }
+  }
+}

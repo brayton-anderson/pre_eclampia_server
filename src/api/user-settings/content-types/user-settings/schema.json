@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users_settings",
+  "info": {
+    "singularName": "user-settings",
+    "pluralName": "users-settings",
+    "displayName": "UserSettings",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userid": {
+      "type": "biginteger"
+    },
+    "waterlimit": {
+      "type": "biginteger"
+    },
+    "stepslimit": {
+      "type": "biginteger"
+    },
+    "themedark": {
+      "type": "boolean"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "doctorphone": {
+      "type": "biginteger"
+    },
+    "doctorname": {
+      "type": "string"
+    },
+    "helperphone": {
+      "type": "biginteger"
+    },
+    "helpername": {
+      "type": "string"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "user_setting"
+    },
+    "distancelimit": {
+      "type": "biginteger"
+    },
+    "timerlimit": {
+      "type": "biginteger"
+    }
+  }
+}
